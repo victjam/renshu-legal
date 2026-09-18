@@ -1,10 +1,10 @@
 ---
-title: Forge
+title: Renshu
 ---
 
-# Forge
+# Renshu
 
-Textos legales de Forge, la app de registro de entrenamiento para iPhone y Apple Watch.
+Textos legales de Renshu, la app de registro de entrenamiento para iPhone y Apple Watch.
 
 - [Política de privacidad](privacy)
 - [Términos de uso](terms)

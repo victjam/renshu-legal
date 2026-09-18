@@ -1,13 +1,17 @@
 ---
-title: Política de privacidad de Forge
+title: Política de privacidad de Renshu
 permalink: /privacy
 ---
 
-# Política de privacidad de Forge
+# Política de privacidad de Renshu
 
-**Última actualización:** 10 de septiembre de 2026
+**Última actualización:** 18 de septiembre de 2026
 
-Este texto describe lo que Forge hace de verdad con tus datos. Cada afirmación
+Renshu se llamó **Forge** hasta septiembre de 2026. Es la misma app, el
+mismo responsable y el mismo tratamiento de datos: solo cambió el nombre
+público.
+
+Este texto describe lo que Renshu hace de verdad con tus datos. Cada afirmación
 sobre el comportamiento de la app está respaldada por el
 mapa de datos interno de la app, que cita el código fuente.
 No es asesoría legal.
@@ -19,12 +23,12 @@ Venezuela, es el responsable del tratamiento de los datos descritos aquí. Puede
 escribir a **victorjmanrique@gmail.com** para cualquier cuestión de privacidad o
 para ejercer tus derechos.
 
-Forge se distribuye a través del App Store en todos los territorios donde el App
+Renshu se distribuye a través del App Store en todos los territorios donde el App
 Store está disponible.
 
-## 2. El principio: Forge es local-first
+## 2. El principio: Renshu es local-first
 
-Entrenar con Forge **no requiere cuenta ni conexión**. Mientras no inicies
+Entrenar con Renshu **no requiere cuenta ni conexión**. Mientras no inicies
 sesión, tus rutinas, tu historial y tus notas viven únicamente en la base de
 datos local de tu iPhone y no se envía nada a nuestros servidores.
 
@@ -40,7 +44,7 @@ autorices, tu nombre y una dirección de correo (que puede ser una dirección
 enmascarada de Apple si eliges ocultar la tuya).
 
 Ese correo se usa sólo para identificar la cuenta y mostrártela en Ajustes. No
-lo almacenamos en ninguna tabla propia de Forge: vive en el sistema de
+lo almacenamos en ninguna tabla propia de Renshu: vive en el sistema de
 autenticación de nuestro proveedor de backend.
 
 La sesión (tokens de acceso y refresco) se guarda en el **Llavero de iOS**, no en
@@ -52,9 +56,9 @@ nuestros servidores.
 
 - **Notas de técnica (Form Notes)**, con su texto y su foto o vídeo. **No se
   suben a ningún servidor.** La app te lo dice antes de guardarlas. El medio se
-  copia dentro del contenedor de Forge, la foto se reencoda a JPEG y el vídeo se
+  copia dentro del contenedor de Renshu, la foto se reencoda a JPEG y el vídeo se
   vuelve a empaquetar **eliminando sus metadatos**, incluida la geolocalización.
-  La copia original en tu app Fotos no se toca, y borrar la nota en Forge no la
+  La copia original en tu app Fotos no se toca, y borrar la nota en Renshu no la
   borra de Fotos.
 - **El entreno en curso**, hasta que lo terminas o lo descartas.
 - **El historial de cambios que aceptas al Coach.** No existe una tabla remota
@@ -84,7 +88,7 @@ vendemos y no los compartimos con anunciantes ni intermediarios de datos.**
 
 ### 4.3 Datos de la app Salud de Apple
 
-Si concedes el permiso, Forge:
+Si concedes el permiso, Renshu:
 
 - **Lee** de Salud: energía activa, frecuencia cardiaca y distancia (caminar o
   correr, bicicleta, natación). La frecuencia cardiaca se consulta sólo en una
@@ -131,6 +135,14 @@ identificadores internos de tus rutinas, que son seudónimos estables.
 Por eso la app te advierte de que el texto que escribas puede identificarte y de
 que evites incluir detalles personales que no quieras compartir. Retirar el
 permiso detiene las peticiones futuras pero **no borra lo ya enviado**.
+
+En este dispositivo conservamos los mensajes de tu conversación para que puedas
+retomarla al cerrar y abrir el Coach. Se guardan separados por cuenta, sin
+sincronizarlos con otros dispositivos, y se incluyen en la exportación JSON de
+tus datos. Puedes borrarlos desde el chat; también se borran al retirar el
+permiso del Coach. La eliminación de la cuenta aplica el proceso de eliminación
+del almacenamiento local de esa cuenta. Los borradores pendientes y el contexto
+de entrenamiento enviado no se conservan como parte de esta conversación local.
 
 Nuestro servidor **no guarda ni el contexto ni la respuesta**. Guarda dos cosas:
 
@@ -212,7 +224,7 @@ Para quien esté cubierto por el RGPD u otra normativa equivalente:
 - **Ejecución del contrato**: cuenta, sincronización de rutinas e historial.
 - **Consentimiento explícito**: datos de salud del perfil, datos leídos de la app
   Salud y envío de contexto al Coach. Puedes retirarlo desde Ajustes de iOS
-  (permisos de Salud) o desde Ajustes de Forge (permiso del Coach).
+  (permisos de Salud) o desde Ajustes de Renshu (permiso del Coach).
 - **Interés legítimo**: seguridad del servicio y control de abuso, que es lo que
   justifica el límite de peticiones del Coach.
 
@@ -234,7 +246,7 @@ Límites que declaramos de forma explícita:
    automático.
 2. Al borrar la cuenta **no revocamos todavía la autorización de Iniciar sesión
    con Apple**. Puedes revocarla tú desde Ajustes de iOS → tu nombre → Iniciar
-   sesión con Apple → Forge.
+   sesión con Apple → Renshu.
 3. El registro de uso del Coach y las respuestas reportadas se conservan
    mientras exista la cuenta y se eliminan al borrarla; no aplicamos hoy un
    plazo más corto.
@@ -253,7 +265,7 @@ autoridad de protección de datos de tu país de residencia.
 
 ## 10. Menores
 
-Forge está dirigida a **mayores de 16 años**. No recogemos a sabiendas datos de
+Renshu está dirigida a **mayores de 16 años**. No recogemos a sabiendas datos de
 personas por debajo de esa edad, y la app no comprueba la edad: si detectamos
 una cuenta de un menor, la eliminaremos. Si eres padre, madre o tutor y crees
 que un menor nos ha entregado datos, escríbenos.

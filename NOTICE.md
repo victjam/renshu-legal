@@ -5,7 +5,7 @@ permalink: /NOTICE
 
 # Third-party notices
 
-Forge ships or links against the work below. Each entry says what the work is,
+Renshu ships or links against the work below. Each entry says what the work is,
 where it lives in this repo, and under which terms it is used.
 
 Required license notices are retained below. Asset provenance is documented
@@ -13,7 +13,7 @@ alongside its build pipeline; credits are also shown in Settings › Credits.
 
 ## Body diagram geometry — MuscleMap
 
-`Forge/Resources/body-paths.json` is derived from
+`Renshu/Resources/body-paths.json` is derived from
 [**MuscleMap**](https://github.com/melihcolpan/MuscleMap) by Melih Colpan,
 used under the **MIT License**.
 
@@ -51,7 +51,7 @@ SOFTWARE.
 
 `tools/anatomy/MuscleBody.usdz` is adapted from **Body Male - Realistic** by
 **Julien Kaspar**, from Blender Studio's **Human Base Meshes v1.0.0** bundle,
-released under **CC0**. Forge adapts the mesh into a neutral mannequin and marks
+released under **CC0**. Renshu adapts the mesh into a neutral mannequin and marks
 workout muscle regions on its surface.
 
 See [the source record and generation steps](tools/anatomy/README.md) for the
