@@ -309,7 +309,7 @@ El registro completo de trabajos de terceros vive en
 ## 13. Cambios en esta política
 
 La versión vigente está publicada en
-<https://victjam.github.io/forge-legal/privacy> con su fecha. Los cambios
+<https://victjam.github.io/renshu-legal/privacy> con su fecha. Los cambios
 materiales se avisarán en la app antes de que surtan efecto.
 
 ## 14. Contacto

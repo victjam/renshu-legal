@@ -188,7 +188,7 @@ ponga en riesgo el servicio o los datos de otras personas.
 ## 14. Cambios en estos términos
 
 La versión vigente está publicada en
-<https://victjam.github.io/forge-legal/terms> con su fecha. Los cambios
+<https://victjam.github.io/renshu-legal/terms> con su fecha. Los cambios
 materiales se avisarán dentro de la app antes de que surtan efecto.
 
 ## 15. Ley aplicable
