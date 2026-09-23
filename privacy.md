@@ -120,9 +120,11 @@ en esas actividades al aire libre.
 - La ruta se guarda **en tu dispositivo** y, si lo permites, en Salud junto al
   entreno. **No se envía a nuestros servidores**, ni a Sentry, ni al Coach, y no
   forma parte de la exportación de datos.
-- La imagen de la ruta que puedes compartir lleva sólo la forma del recorrido:
-  sin mapa, sin coordenadas y sin datos de ubicación en el archivo. Tú decides
-  si la compartes y con quién.
+- La tarjeta de ruta que puedes compartir tiene dos versiones: **Línea**, sólo la
+  forma del recorrido, sin mapa; y **Mapa**, con el recorrido sobre el mapa
+  real, que sí muestra por qué calles pasaste. Ninguna lleva coordenadas ni
+  datos de ubicación dentro del archivo. Tú eliges la versión y si la
+  compartes y con quién.
 - Si deniegas el permiso, las actividades funcionan igual, sin ruta. Puedes
   cambiarlo en Ajustes de iOS → Renshu → Ubicación.
 
@@ -235,7 +237,7 @@ Verificado revisando todo el código de la app:
 
 | Proveedor | Papel | Qué recibe |
 | --- | --- | --- |
-| **Apple** | Autenticación (Sign in with Apple), plataforma, app Salud, copias de seguridad del dispositivo | Identidad de acceso; los entrenos que escribimos en Salud quedan en tu dispositivo y bajo tu cuenta de Apple |
+| **Apple** | Autenticación (Sign in with Apple), plataforma, app Salud, Apple Maps, copias de seguridad del dispositivo | Identidad de acceso; los entrenos que escribimos en Salud quedan en tu dispositivo y bajo tu cuenta de Apple; la zona de una ruta cuando se muestra en un mapa (resumen o tarjeta «Mapa») |
 | **Supabase** | Base de datos, autenticación y funciones del backend | Todo lo descrito en 4.2, más el registro de uso del Coach y las respuestas que reportes |
 | **Google** (API de Gemini) | Generación de las respuestas del Coach | Lo descrito en 4.6, sin identificador de cuenta. Hoy no recibe nada: el Coach está desactivado |
 | **Sentry** (Estados Unidos) | Informes de fallos y errores técnicos | Traza del fallo, versión y build de la app, modelo de iPhone, versión de iOS y el nombre del tipo de error. **Nunca** tu identificador de cuenta, tu correo, tus notas, tus datos de salud ni nada que hayas escrito |
@@ -254,8 +256,9 @@ Para quien esté cubierto por el RGPD u otra normativa equivalente:
 
 - **Ejecución del contrato**: cuenta, sincronización de rutinas e historial.
 - **Consentimiento explícito**: datos de salud del perfil, datos leídos de la app
-  Salud y envío de contexto al Coach. Puedes retirarlo desde Ajustes de iOS
-  (permisos de Salud) o desde Ajustes de Renshu (permiso del Coach).
+  Salud y, si el Coach se activa, envío de contexto al Coach. Puedes retirar el
+  de Salud desde Ajustes de iOS; el del Coach no aplica mientras esté
+  desactivado.
 - **Interés legítimo**: seguridad del servicio y control de abuso, que es lo que
   justifica el límite de peticiones del Coach.
 
