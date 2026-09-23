@@ -59,12 +59,10 @@ revocar tu autorización de Iniciar sesión con Apple cuando borres la cuenta
 
 ### 4.1 Datos que sólo existen en tu dispositivo
 
-- **Notas de técnica (Form Notes)**, con su texto y su foto o vídeo. **No se
-  suben a ningún servidor.** La app te lo dice antes de guardarlas. El medio se
-  copia dentro del contenedor de Renshu, la foto se reencoda a JPEG y el vídeo se
-  vuelve a empaquetar **eliminando sus metadatos**, incluida la geolocalización.
-  La copia original en tu app Fotos no se toca, y borrar la nota en Renshu no la
-  borra de Fotos.
+- **Notas de técnica (Form Notes)**, sólo texto. **No se suben a ningún
+  servidor.** La app te lo dice antes de guardarlas. Hasta septiembre de 2026
+  admitían una foto o un vídeo; desde la versión 2.0.0 (205) ya no, y la app
+  borró las copias que guardaba. Los originales siguen en tu app Fotos.
 - **El entreno en curso**, hasta que lo terminas o lo descartas.
 - **El historial de cambios que aceptas al Coach.** No existe una tabla remota
   para ello; es una decisión de diseño.
@@ -96,7 +94,11 @@ vendemos y no los compartimos con anunciantes ni intermediarios de datos.**
 Si concedes el permiso, Renshu:
 
 - **Lee** de Salud: energía activa, frecuencia cardiaca y distancia (caminar o
-  correr, bicicleta, natación). La frecuencia cardiaca se consulta sólo en una
+  correr, bicicleta, natación). También **los entrenos que graban otras apps**
+  (la app Entreno de Apple, Strava…) y sus rutas, para completar tu historial:
+  esos entrenos importados **se quedan en tu iPhone**, no se guardan en nuestro
+  servidor, y si los borras en Salud desaparecen de Renshu la próxima vez que
+  la abras (mientras el permiso de lectura siga activo). La frecuencia cardiaca se consulta sólo en una
   ventana de los últimos diez minutos, durante el entreno.
 - **Escribe** en Salud tu entreno terminado, para que aparezca en Fitness y
   cuente en tus anillos. En el Apple Watch, la sesión grabada incluye además las
@@ -212,8 +214,7 @@ como ocurre con cualquier imagen alojada fuera de la app.
 - **La exportación de datos** produce un JSON y dos CSV con tu perfil completo
   —incluidos fecha de nacimiento, sexo, peso, altura, áreas de cuidado y tu nota
   del Coach— y todo tu historial. El fichero se guarda donde tú decides, sin
-  pasar por la red. Las notas de técnica y sus adjuntos quedan fuera de esta
-  exportación.
+  pasar por la red. Las notas de técnica quedan fuera de esta exportación.
 
 ## 5. Qué NO hacemos
 
@@ -267,7 +268,7 @@ Para quien esté cubierto por el RGPD u otra normativa equivalente:
 Puedes borrar tu cuenta desde Ajustes de la app. El borrado elimina el usuario en
 nuestro backend y, con él, en cascada, tu perfil, rutinas, historial, registro de
 uso del Coach y respuestas reportadas. En el mismo flujo la app elimina el
-almacén local de esa cuenta y los medios de sus notas de técnica. Si la
+almacén local de esa cuenta, incluidas sus notas de técnica. Si la
 respuesta del servidor se pierde a mitad del proceso, la app la recupera al
 volver a abrirse y completa la limpieza sin repetir el borrado.
 
@@ -316,8 +317,7 @@ que un menor nos ha entregado datos, escríbenos.
 - El catálogo de ejercicios sólo es legible por usuarios autenticados.
 - Los tokens de sesión y la prueba de borrado se guardan en el Llavero de iOS; la
   prueba de borrado está marcada para no sincronizarse con el Llavero de iCloud.
-- Los medios de las notas de técnica y el diario de borrado se escriben con
-  protección de datos de iOS. El almacén local principal usa la protección que
+- El diario de borrado se escribe con protección de datos de iOS. El almacén local principal usa la protección que
   iOS aplica por defecto.
 - Los registros de nuestras funciones de servidor están escritos para **no**
   incluir el contenido de tus peticiones ni tu identidad.
