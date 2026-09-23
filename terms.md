@@ -5,7 +5,7 @@ permalink: /terms
 
 # Términos de uso de Renshu
 
-**Última actualización:** 18 de septiembre de 2026
+**Última actualización:** 23 de septiembre de 2026
 
 Renshu se llamó **Forge** hasta septiembre de 2026. Es la misma app, el
 mismo responsable y el mismo tratamiento de datos: solo cambió el nombre
@@ -46,7 +46,9 @@ de entrenamiento viven en una base de datos local del dispositivo.
 
 Con cuenta iniciada, tus rutinas, historial, perfil de entrenamiento y
 progresión se sincronizan con nuestro backend para que puedas usarlos en otro
-dispositivo. Las funciones de Coach requieren cuenta y conexión.
+dispositivo. Las actividades de distancia pueden grabar su ruta con la
+ubicación del dispositivo si le das permiso; la ruta se queda en el dispositivo
+y en Salud.
 
 **Renshu no es un servicio médico ni sanitario.** Los pesos sugeridos, las
 estimaciones de 1RM, los mapas de calor y cualquier plan generado por Coach son
@@ -107,6 +109,10 @@ anula el código, de modo que deja de resolverse para quien lo tenga.
 
 ## 7. Coach
 
+**El Coach no está disponible en la versión actual de Renshu.** Esta sección se
+aplica sólo si se activa en una versión futura; entonces requerirá cuenta,
+conexión y tu permiso explícito.
+
 Coach genera propuestas de rutina y revisiones a partir del contexto de
 entrenamiento que la app envía. Para producirlas usamos Google Gemini como
 proveedor de modelos de lenguaje; el detalle de lo que se le envía está en la
@@ -147,14 +153,16 @@ El registro completo y vigente de terceros vive en
 | --- | --- | --- |
 | **MuscleMap** (Melih Colpan) | Geometría del diagrama corporal | MIT |
 | **Human Base Meshes v1.0.0** — *Body Male – Realistic*, Julien Kaspar / Blender Studio | Malla 3D adaptada del mapa muscular | CC0 |
-| **ExerciseDB** | Nombres, músculos, equipamiento, instrucciones y medios de los ejercicios | Licencia propia: permite usar el conjunto dentro del producto, **no** republicarlo como API abierta |
+| **exercises-dataset** | Nombres, músculos, equipamiento e instrucciones de los ejercicios | MIT |
+| Imágenes de ejercicios, **© Gym visual** (gymvisual.com) | Se muestran enlazadas desde el servidor de ExerciseDB | Fuera de la licencia MIT; no se copian ni se redistribuyen |
 | **SVGPath** (Nick Lockwood) | Paquete SwiftPM enlazado | MIT |
 | **SDWebImageSwiftUI** y **SDWebImage** | Paquete SwiftPM enlazado | MIT |
 | **supabase-swift** (Supabase) | Paquete SwiftPM enlazado | MIT |
+| **sentry-cocoa** (Sentry) | Paquete SwiftPM enlazado | MIT |
 
-Para respetar la licencia de ExerciseDB, el catálogo sólo es legible por
-usuarios autenticados y los medios de ejercicios se enlazan en lugar de copiarse
-a nuestro almacenamiento.
+Las imágenes de los ejercicios se enlazan en lugar de copiarse a la app o a
+nuestro almacenamiento: su titular es Gym visual y no están bajo la licencia MIT
+del conjunto de datos.
 
 ## 11. Apple
 

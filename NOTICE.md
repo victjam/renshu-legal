@@ -5,7 +5,7 @@ permalink: /NOTICE
 
 # Third-party notices
 
-Renshu ships or links against the work below. Each entry says what the work is,
+Forge ships or links against the work below. Each entry says what the work is,
 where it lives in this repo, and under which terms it is used.
 
 Required license notices are retained below. Asset provenance is documented
@@ -13,7 +13,7 @@ alongside its build pipeline; credits are also shown in Settings › Credits.
 
 ## Body diagram geometry — MuscleMap
 
-`Renshu/Resources/body-paths.json` is derived from
+`Forge/Resources/body-paths.json` is derived from
 [**MuscleMap**](https://github.com/melihcolpan/MuscleMap) by Melih Colpan,
 used under the **MIT License**.
 
@@ -51,7 +51,7 @@ SOFTWARE.
 
 `tools/anatomy/MuscleBody.usdz` is adapted from **Body Male - Realistic** by
 **Julien Kaspar**, from Blender Studio's **Human Base Meshes v1.0.0** bundle,
-released under **CC0**. Renshu adapts the mesh into a neutral mannequin and marks
+released under **CC0**. Forge adapts the mesh into a neutral mannequin and marks
 workout muscle regions on its surface.
 
 See [the source record and generation steps](tools/anatomy/README.md) for the
@@ -59,15 +59,20 @@ official download, source checksum and modifications. The editable source
 contains an embedded `SOURCE AND LICENSE.txt` record. The earlier Z-Anatomy
 model is no longer used by this pipeline.
 
-## Exercise data and media — ExerciseDB
+## Exercise data — exercises-dataset (MIT)
 
-Exercise names, muscles, equipment and instructions come from **ExerciseDB**
-(`oss.exercisedb.dev` and its RapidAPI distribution). Its licence allows using
-the dataset inside the product but not republishing it as an open API — which
-is why `public.exercises` is readable only by `authenticated` users, never
-`anon`, and why media is **hotlinked rather than copied** into our own
-storage. See the note in
-`supabase/migrations/20260824000001_r1_cuentas_y_rutinas.sql`.
+Since build 189, exercise names, muscles, equipment and instructions come from
+[hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset)
+(MIT): the bundled index `Forge/Resources/exercise-index.json` and the
+`public.exercises` / `exercise_translations` tables, keyed by its `logpress` ids.
+The app no longer calls ExerciseDB or RapidAPI for data.
+
+## Exercise images — © Gym visual
+
+The exercise images are **© Gym visual** (gymvisual.com) and fall outside the
+dataset's MIT licence. They are shown by hotlinking `static.exercisedb.dev`,
+never copied into the app bundle or our storage, and credited in Settings ›
+Credits as the licence requires.
 
 ## Swift packages
 

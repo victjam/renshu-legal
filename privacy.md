@@ -5,7 +5,7 @@ permalink: /privacy
 
 # Política de privacidad de Renshu
 
-**Última actualización:** 18 de septiembre de 2026
+**Última actualización:** 23 de septiembre de 2026
 
 Renshu se llamó **Forge** hasta septiembre de 2026. Es la misma app, el
 mismo responsable y el mismo tratamiento de datos: solo cambió el nombre
@@ -49,6 +49,11 @@ autenticación de nuestro proveedor de backend.
 
 La sesión (tokens de acceso y refresco) se guarda en el **Llavero de iOS**, no en
 nuestros servidores.
+
+Al iniciar sesión, la app nos pasa además un código de un solo uso de Apple que
+cambiamos por un token de Apple. Lo guardamos **cifrado** y **sólo** para poder
+revocar tu autorización de Iniciar sesión con Apple cuando borres la cuenta
+(ver 8). No da acceso a ningún dato tuyo y se borra con la cuenta.
 
 ## 4. Qué datos tratamos y para qué
 
@@ -95,14 +100,33 @@ Si concedes el permiso, Renshu:
   ventana de los últimos diez minutos, durante el entreno.
 - **Escribe** en Salud tu entreno terminado, para que aparezca en Fitness y
   cuente en tus anillos. En el Apple Watch, la sesión grabada incluye además las
-  muestras de frecuencia cardiaca y energía que el reloj recoge.
+  muestras de frecuencia cardiaca y energía que el reloj recoge. En carreras,
+  caminatas y salidas en bici, el entreno lleva también su ruta y la distancia
+  medida (ver 4.4).
 
 **Nada de lo que leemos de Salud se envía a nuestros servidores.** Lo único que
 se sincroniza es una referencia interna al entreno que escribimos, no las
 muestras. Puedes revocar el permiso en cualquier momento desde Ajustes de iOS →
 Salud; revocarlo no elimina lo ya escrito en Salud, que gestionas desde esa app.
 
-### 4.4 Apple Watch y widgets
+### 4.4 Ubicación y rutas
+
+Si concedes el permiso de ubicación («Mientras se usa la app»), Renshu graba la
+ruta de tus carreras, caminatas y salidas en bici **mientras la actividad está en
+marcha**, también con el iPhone bloqueado. Ninguna otra actividad, ni la app
+fuera de una actividad, usa la ubicación. En el Apple Watch ocurre lo mismo, sólo
+en esas actividades al aire libre.
+
+- La ruta se guarda **en tu dispositivo** y, si lo permites, en Salud junto al
+  entreno. **No se envía a nuestros servidores**, ni a Sentry, ni al Coach, y no
+  forma parte de la exportación de datos.
+- La imagen de la ruta que puedes compartir lleva sólo la forma del recorrido:
+  sin mapa, sin coordenadas y sin datos de ubicación en el archivo. Tú decides
+  si la compartes y con quién.
+- Si deniegas el permiso, las actividades funcionan igual, sin ruta. Puedes
+  cambiarlo en Ajustes de iOS → Renshu → Ubicación.
+
+### 4.5 Apple Watch y widgets
 
 El Apple Watch recibe del iPhone lo necesario para dirigir el entreno: nombre de
 la rutina, nombres de los ejercicios, series con repeticiones, peso y estado, y
@@ -114,7 +138,11 @@ El widget lee una copia reducida del estado —rutina de hoy, rutina siguiente,
 sesiones de la semana, objetivo, racha y qué días del mes entrenaste— desde un
 contenedor compartido en tu dispositivo. Ese contenedor no sale del teléfono.
 
-### 4.5 El Coach y Google Gemini
+### 4.6 El Coach y Google Gemini
+
+> **El Coach no está disponible en la versión actual de Renshu.** Mientras siga
+> desactivado, la app no envía nada a Google. Lo que sigue describe cómo
+> funcionará si se activa; entonces te lo pediremos de nuevo antes de usarlo.
 
 El Coach es una función opcional que **requiere tu permiso explícito**. La app te
 muestra antes qué se envía y no lo envía hasta que aceptas.
@@ -156,19 +184,18 @@ Google puede conservar temporalmente el contenido enviado a su API conforme a
 los términos de la API de Gemini. No hemos contratado ningún plan que autorice
 a Google a usar ese contenido para entrenar sus modelos.
 
-### 4.6 Catálogo de ejercicios
+### 4.7 Catálogo de ejercicios
 
-Los nombres, músculos, equipamiento, instrucciones y medios de los ejercicios
-proceden de **ExerciseDB**, a través de su API pública y de su distribución en
-RapidAPI. Al buscar un ejercicio, tu dispositivo envía el término de búsqueda o
-el identificador del ejercicio a esos servicios. **No enviamos ningún
-identificador tuyo** en esas peticiones.
+Los nombres, músculos y equipamiento de los ejercicios vienen incluidos en la
+app: **buscar un ejercicio no hace ninguna petición de red**. Las instrucciones
+se descargan de nuestro backend al abrir un ejercicio, sólo con el identificador
+del ejercicio.
 
 Las imágenes animadas de los ejercicios se cargan directamente desde el servidor
 de ExerciseDB, por lo que **tu dirección IP llega a ese proveedor** al mostrarlas,
 como ocurre con cualquier imagen alojada fuera de la app.
 
-### 4.7 Compartir y exportar
+### 4.8 Compartir y exportar
 
 - **Compartir una rutina** genera un código. Quien tenga ese código y una cuenta
   puede ver el nombre de la rutina, su día, sus ejercicios y series, **y tu
@@ -192,9 +219,11 @@ Verificado revisando todo el código de la app:
 
 - **No hay publicidad ni rastreo.** No usamos IDFA, ni pedimos permiso de
   seguimiento, ni existe ningún SDK publicitario.
-- **No hay analítica ni telemetría de producto**, ni herramienta de reporte de
-  fallos de terceros.
-- **No recogemos tu ubicación.** La app no usa servicios de localización.
+- **No hay analítica ni telemetría de producto.** El único servicio técnico de
+  terceros es Sentry, para informes de fallos, con lo que describe la sección de
+  proveedores.
+- **Tu ubicación no sale del dispositivo.** Sólo se usa para la ruta de una
+  actividad en marcha (4.4).
 - **No accedemos a tu cámara ni a tu fototeca.** El selector de fotos de iOS te
   deja entregar un elemento concreto sin darnos acceso a la biblioteca.
 - **No enviamos notificaciones push desde un servidor.** El único aviso es local,
@@ -208,11 +237,13 @@ Verificado revisando todo el código de la app:
 | --- | --- | --- |
 | **Apple** | Autenticación (Sign in with Apple), plataforma, app Salud, copias de seguridad del dispositivo | Identidad de acceso; los entrenos que escribimos en Salud quedan en tu dispositivo y bajo tu cuenta de Apple |
 | **Supabase** | Base de datos, autenticación y funciones del backend | Todo lo descrito en 4.2, más el registro de uso del Coach y las respuestas que reportes |
-| **Google** (API de Gemini) | Generación de las respuestas del Coach | Lo descrito en 4.5, sin identificador de cuenta |
-| **ExerciseDB / RapidAPI** | Catálogo y medios de ejercicios | Términos de búsqueda e identificadores de ejercicio; tu IP al cargar medios |
+| **Google** (API de Gemini) | Generación de las respuestas del Coach | Lo descrito en 4.6, sin identificador de cuenta. Hoy no recibe nada: el Coach está desactivado |
+| **Sentry** (Estados Unidos) | Informes de fallos y errores técnicos | Traza del fallo, versión y build de la app, modelo de iPhone, versión de iOS y el nombre del tipo de error. **Nunca** tu identificador de cuenta, tu correo, tus notas, tus datos de salud ni nada que hayas escrito |
+| **ExerciseDB** | Imágenes de los ejercicios | Tu IP al cargar una imagen |
 
 Nuestro proyecto de Supabase está alojado en **Estados Unidos** (región
 us-east-2). Google procesa las peticiones del Coach en su infraestructura global.
+Sentry procesa los informes de fallo en **Estados Unidos**.
 Si vives fuera de Estados Unidos, tus datos sincronizados se transfieren allí.
 Usamos estos proveedores bajo sus términos de servicio estándar; no hemos
 firmado acuerdos de tratamiento adicionales.
@@ -244,9 +275,12 @@ Límites que declaramos de forma explícita:
    borrado cuya respuesta se perdió; no es legible por ningún cliente y no
    permite reconstruir ningún dato tuyo. Hoy no tiene un plazo de caducidad
    automático.
-2. Al borrar la cuenta **no revocamos todavía la autorización de Iniciar sesión
-   con Apple**. Puedes revocarla tú desde Ajustes de iOS → tu nombre → Iniciar
-   sesión con Apple → Renshu.
+2. Al borrar la cuenta **revocamos tu autorización de Iniciar sesión con Apple**
+   antes de eliminar el usuario. Sólo podemos hacerlo si has iniciado sesión al
+   menos una vez con la versión 2.0.0 (201) o posterior, que es cuando empezamos
+   a guardar el token necesario. Si tu último inicio de sesión es anterior, o si
+   Apple no responde, puedes revocarla tú desde Ajustes de iOS → tu nombre →
+   Iniciar sesión con Apple → Renshu.
 3. El registro de uso del Coach y las respuestas reportadas se conservan
    mientras exista la cuenta y se eliminan al borrarla; no aplicamos hoy un
    plazo más corto.
@@ -258,7 +292,7 @@ Límites que declaramos de forma explícita:
 ## 9. Tus derechos
 
 Puedes acceder a tus datos, rectificarlos, borrarlos, limitar u oponerte a su
-tratamiento y solicitar su portabilidad. La exportación descrita en 4.7 cubre por
+tratamiento y solicitar su portabilidad. La exportación descrita en 4.8 cubre por
 sí sola el acceso y la portabilidad en formato legible por máquina; para lo
 demás, escribe a victorjmanrique@gmail.com. También puedes reclamar ante la
 autoridad de protección de datos de tu país de residencia.
@@ -296,12 +330,13 @@ El registro completo de trabajos de terceros vive en
 - **MuscleMap**, de Melih Colpan (MIT), para la geometría del diagrama corporal.
 - **Human Base Meshes v1.0.0** — *Body Male – Realistic*, de Julien Kaspar /
   Blender Studio (CC0), para la malla 3D del mapa muscular.
-- **ExerciseDB**, para los datos y medios de ejercicios. Su licencia permite usar
-  el conjunto dentro del producto pero no republicarlo como API abierta; por eso
-  el catálogo sólo es legible por usuarios autenticados y los medios se enlazan
-  en lugar de copiarse.
+- **exercises-dataset** (MIT), para los nombres, músculos, equipamiento e
+  instrucciones de los ejercicios.
+- Las **imágenes de los ejercicios son © Gym visual** (gymvisual.com). No forman
+  parte de la licencia MIT: se muestran enlazándolas desde el servidor de
+  ExerciseDB, nunca copiadas a la app ni a nuestro almacenamiento.
 - Paquetes de Swift enlazados: **SVGPath** (MIT), **SDWebImageSwiftUI** y
-  **SDWebImage** (MIT), **supabase-swift** (MIT) y sus dependencias
+  **SDWebImage** (MIT), **sentry-cocoa** (MIT), **supabase-swift** (MIT) y sus dependencias
   **swift-crypto** (Apache-2.0), **swift-asn1**, **swift-http-types**,
   **swift-clocks**, **swift-concurrency-extras** y **xctest-dynamic-overlay**.
 - La iconografía es de **SF Symbols**, de Apple, sujeta a sus condiciones de uso.
