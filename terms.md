@@ -74,9 +74,11 @@ completa la limpieza al volver a abrirse. Límites declarados de forma explícit
 - Queda un **recibo de borrado** con el identificador interno de usuario y una
   huella criptográfica, guardado para poder completar un borrado cuya respuesta
   se perdió. No es legible por ningún cliente ni permite reconstruir tus datos.
-- Si iniciaste sesión con Apple, el borrado **no revoca todavía la autorización
-  de Apple**. Puedes revocarla tú desde Ajustes de iOS → tu nombre → Iniciar
-  sesión con Apple.
+- Si iniciaste sesión con Apple, el borrado **revoca tu autorización de Apple**
+  antes de eliminar la cuenta, siempre que hayas iniciado sesión al menos una
+  vez con la versión 2.0.0 (201) o posterior. Si no, o si Apple no responde,
+  puedes revocarla tú desde Ajustes de iOS → tu nombre → Iniciar sesión con
+  Apple.
 
 ## 5. Contenido que aportas
 
