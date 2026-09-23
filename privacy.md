@@ -100,6 +100,11 @@ Si concedes el permiso, Renshu:
   servidor, y si los borras en Salud desaparecen de Renshu la próxima vez que
   la abras (mientras el permiso de lectura siga activo). La frecuencia cardiaca se consulta sólo en una
   ventana de los últimos diez minutos, durante el entreno.
+- **Lee** también, para mostrarlos y nada más, tus pasos, minutos de ejercicio y
+  energía activa de hoy (en Inicio) y la media semanal de tu pulso en reposo y
+  tu VO2 máx de las últimas doce semanas (en Estadísticas). Se consultan cada
+  vez que abres esas pantallas y **no se guardan**: ni en tu iPhone ni en
+  nuestro servidor.
 - **Escribe** en Salud tu entreno terminado, para que aparezca en Fitness y
   cuente en tus anillos. En el Apple Watch, la sesión grabada incluye además las
   muestras de frecuencia cardiaca y energía que el reloj recoge. En carreras,
