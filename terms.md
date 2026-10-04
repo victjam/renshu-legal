@@ -5,7 +5,7 @@ permalink: /terms
 
 # Términos de uso de Renshu
 
-**Última actualización:** 23 de septiembre de 2026
+**Última actualización:** 4 de octubre de 2026
 
 Renshu se llamó **Forge** hasta septiembre de 2026. Es la misma app, el
 mismo responsable y el mismo tratamiento de datos: solo cambió el nombre
@@ -41,8 +41,9 @@ una cuenta de un menor, la eliminaremos.
 
 Renshu te deja escribir rutinas, ejecutarlas serie a serie, registrar el
 resultado como historial y consultar estadísticas y mapas de calor corporales.
-Funciona **local-first**: entrenar no requiere cuenta ni conexión, y los datos
-de entrenamiento viven en una base de datos local del dispositivo.
+Funciona **local-first**: los datos de entrenamiento viven en una base de datos
+local del dispositivo y entrenar no requiere conexión. Sí requiere una cuenta:
+hoy el acceso a la app pasa por iniciar sesión.
 
 Con cuenta iniciada, tus rutinas, historial, perfil de entrenamiento y
 progresión se sincronizan con nuestro backend para que puedas usarlos en otro
@@ -59,8 +60,9 @@ conlleva riesgo de lesión y lo asumes tú.
 
 ## 4. Tu cuenta
 
-La cuenta es opcional. Mientras no inicies sesión, Renshu funciona con un almacén
-local anónimo y no envía nada a nuestro backend.
+Para usar Renshu necesitas una cuenta: el acceso a la app pasa por iniciar
+sesión con Apple. Entrenar después no requiere conexión, y lo que registras vive
+en el almacén local de esa cuenta.
 
 Eres responsable de mantener el control del dispositivo y de las credenciales
 con las que inicias sesión. Los almacenes locales están separados por cuenta:

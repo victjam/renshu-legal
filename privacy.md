@@ -5,7 +5,7 @@ permalink: /privacy
 
 # Política de privacidad de Renshu
 
-**Última actualización:** 23 de septiembre de 2026
+**Última actualización:** 4 de octubre de 2026
 
 Renshu se llamó **Forge** hasta septiembre de 2026. Es la misma app, el
 mismo responsable y el mismo tratamiento de datos: solo cambió el nombre
@@ -28,9 +28,12 @@ Store está disponible.
 
 ## 2. El principio: Renshu es local-first
 
-Entrenar con Renshu **no requiere cuenta ni conexión**. Mientras no inicies
-sesión, tus rutinas, tu historial y tus notas viven únicamente en la base de
-datos local de tu iPhone y no se envía nada a nuestros servidores.
+**Entrenar no requiere conexión**: tus rutinas, tu historial y tus notas viven
+en la base de datos local de tu iPhone, y una vez dentro puedes entrenar, mirar
+tu historial y tus estadísticas sin red. Sí necesitan conexión el primer acceso
+—iniciar sesión con Apple— y las funciones que consultan algo fuera: compartir o
+importar una rutina por código, y abrir la guía de un ejercicio cuya ficha no
+esté ya descargada. El acceso requiere una cuenta.
 
 Cuando inicias sesión, sincronizamos un subconjunto concreto de esos datos para
 que puedas usarlos en otro dispositivo. Este documento dice exactamente cuál.
@@ -111,10 +114,15 @@ Si concedes el permiso, Renshu:
   caminatas y salidas en bici, el entreno lleva también su ruta y la distancia
   medida (ver 4.4).
 
-**Nada de lo que leemos de Salud se envía a nuestros servidores.** Lo único que
-se sincroniza es una referencia interna al entreno que escribimos, no las
-muestras. Puedes revocar el permiso en cualquier momento desde Ajustes de iOS →
-Salud; revocarlo no elimina lo ya escrito en Salud, que gestionas desde esa app.
+**Las muestras que leemos de Salud no se envían a nuestros servidores**, ni los
+entrenos que importamos de otras apps: todo eso se queda en tu iPhone, igual que
+la referencia interna que une una sesión con su entreno en Salud. Hay una excepción que conviene nombrar: un entreno que Renshu grabó en
+tu Apple Watch sin el iPhone llega al teléfono a través de Salud, y el teléfono
+lo trata como una sesión propia, así que su fecha, duración, tipo y distancia se
+sincronizan igual que si lo hubieras entrenado con el iPhone en la mano.
+
+Puedes revocar el permiso en cualquier momento desde Ajustes de iOS → Salud;
+revocarlo no elimina lo ya escrito en Salud, que gestionas desde esa app.
 
 ### 4.4 Ubicación y rutas
 
